@@ -6,75 +6,40 @@
     <title>Abhishek Kumar Singh | Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif; }
-        body { background:linear-gradient(135deg,#e2e8f0,#f8fafc); color:#1e293b; overflow-x:hidden; }
-        header { background:linear-gradient(135deg,#020617,#0f172a); color:#fff; padding:90px 20px; text-align:center; }
-        header img { width:170px;height:170px;border-radius:50%;border:5px solid #38bdf8;box-shadow:0 0 30px rgba(56,189,248,.6);margin-bottom:20px;animation:float 3s ease-in-out infinite; }
-        #typing-name { font-size:2.8rem; letter-spacing:1px; }
-        #typing-role { margin-top:10px;font-size:1.3rem;color:#38bdf8;min-height:32px; }
-        section { max-width:1100px;margin:auto;padding:80px 20px;opacity:0;transform:translateY(40px);transition:all .8s ease; }
-        section.show { opacity:1;transform:translateY(0); }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background: linear-gradient(135deg,#e2e8f0,#f8fafc); color:#1e293b; }
+        header { background: linear-gradient(135deg,#020617,#0f172a); color:#fff; padding:80px 20px; text-align:center; }
+        header img { width:170px;height:170px;border-radius:50%;border:5px solid #38bdf8;box-shadow:0 0 30px rgba(56,189,248,.6);margin-bottom:20px; }
+        section { max-width:1100px;margin:auto;padding:70px 20px; }
         h2 { font-size:2rem;margin-bottom:30px;border-left:6px solid #38bdf8;padding-left:12px; }
-        .grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px; }
-        .card { background:#fff;padding:30px;border-radius:18px;box-shadow:0 20px 40px rgba(0,0,0,.08);transition:.4s; }
-        .card:hover { transform:translateY(-12px) scale(1.02);box-shadow:0 35px 70px rgba(0,0,0,.2); }
         .skills-wrapper { max-width:700px;margin:auto; }
         .skill { margin-bottom:22px; }
+        .skill span { font-weight:600; }
         .progress { height:12px;background:#cbd5f5;border-radius:20px;overflow:hidden;margin-top:8px; }
-        .progress div { height:100%;background:linear-gradient(90deg,#0ea5e9,#38bdf8);border-radius:20px;animation:grow 2s ease; }
-        .social-links a { display:inline-block;margin:10px;padding:14px 26px;border-radius:30px;background:linear-gradient(135deg,#0ea5e9,#38bdf8);color:#020617;font-weight:600;transition:.3s; }
-        .social-links a:hover { transform:scale(1.12); }
-        footer { background:#020617;color:#94a3b8;text-align:center;padding:30px; }
-        @keyframes grow { from{width:0;} }
-        @keyframes float { 0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);} }
+        .progress div { height:100%;background:linear-gradient(90deg,#0ea5e9,#38bdf8);border-radius:20px;animation:grow 1.8s ease; }
+        @keyframes grow { from { width:0; } }
+        .grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px; }
+        .card { background:#fff;padding:30px;border-radius:18px;box-shadow:0 20px 40px rgba(0,0,0,.08);transition:.3s; }
+        .card:hover { transform:translateY(-8px);box-shadow:0 30px 60px rgba(0,0,0,.15); }
+        .social-links a { display:inline-block;margin:10px;padding:12px 24px;border-radius:30px;background:linear-gradient(135deg,#0ea5e9,#38bdf8);color:#020617;font-weight:600;transition:.3s; }
+        .social-links a:hover { transform:scale(1.08); }
+        footer { background:#020617;color:#94a3b8;text-align:center;padding:25px; }
     </style>
-    <script>
-        // Scroll animation
-        const sections = document.querySelectorAll('section');
-        window.addEventListener('scroll', () => {
-            sections.forEach(sec => {
-                const top = sec.getBoundingClientRect().top;
-                if (top < window.innerHeight - 100) sec.classList.add('show');
-            });
-        });
-    </script>
 </head>
 <body>
 
 <header>
     <img src="Abhishek.png" alt="Abhishek Kumar Singh">
     <h1 id="typing-name"></h1>
-    <p id="typing-role"></p>
     <script>
-        // Name typing
-        const nameText = "Abhishek Kumar Singh";
-        let ni = 0;
+        const text = "Abhishek Kumar Singh";
+        let i = 0;
         function typeName() {
-            if (ni < nameText.length) {
-                document.getElementById("typing-name").innerHTML += nameText.charAt(ni);
-                ni++;
+            if (i < text.length) {
+                document.getElementById("typing-name").innerHTML += text.charAt(i);
+                i++;
                 setTimeout(typeName, 120);
-            } else {
-                setTimeout(typeRole, 500);
             }
-        }
-
-        // Role typing loop
-        const roles = ["Data Scientist", "AI Engineer", "Python Developer", "Cloud Enthusiast"];
-        let ri = 0, ci = 0, deleting = false;
-        function typeRole() {
-            const el = document.getElementById("typing-role");
-            if (!deleting && ci < roles[ri].length) {
-                el.innerHTML = roles[ri].substring(0, ci + 1) + "|";
-                ci++;
-            } else if (deleting && ci > 0) {
-                el.innerHTML = roles[ri].substring(0, ci - 1) + "|";
-                ci--;
-            } else {
-                deleting = !deleting;
-                if (!deleting) ri = (ri + 1) % roles.length;
-            }
-            setTimeout(typeRole, deleting ? 60 : 100);
         }
         typeName();
     </script>
@@ -99,26 +64,30 @@
 <section id="skills">
     <h2>Skills</h2>
     <div class="skills-wrapper">
-        <div class="skill"><span>Python</span><div class="progress"><div style="width:90%"></div></div></div>
-        <div class="skill"><span>Data Science</span><div class="progress"><div style="width:85%"></div></div></div>
-        <div class="skill"><span>Machine Learning</span><div class="progress"><div style="width:80%"></div></div></div>
-        <div class="skill"><span>NLP</span><div class="progress"><div style="width:78%"></div></div></div>
-        <div class="skill"><span>AWS Cloud</span><div class="progress"><div style="width:70%"></div></div></div>
-        <div class="skill"><span>HTML & CSS</span><div class="progress"><div style="width:75%"></div></div></div>
-    </div>
-</section>
-
-<section id="certifications">
-    <h2>Certifications</h2>
-    <div class="grid">
-        <div class="card"><a href="https://coursera.org/verify/V8XVVGTZAR6K" target="_blank">A Crash Course in Data Science – Johns Hopkins</a></div>
-        <div class="card"><a href="https://coursera.org/verify/933UKCZVLLGK" target="_blank">AI For Everyone – DeepLearning.AI</a></div>
-        <div class="card"><a href="https://coursera.org/verify/6PVHVM4QPRGG" target="_blank">NLP: Classification & Vector Spaces – DeepLearning.AI</a></div>
-        <div class="card"><a href="https://coursera.org/verify/8SHNK8SQV5EV" target="_blank">NLP with Probabilistic Models – DeepLearning.AI</a></div>
-        <div class="card"><a href="https://coursera.org/verify/RLTWJVTE3TES" target="_blank">NLP with Sequence Models – DeepLearning.AI</a></div>
-        <div class="card"><a href="https://coursera.org/verify/PANVPPYKMX4K" target="_blank">Mathematics for ML – Imperial College London</a></div>
-        <div class="card"><a href="https://coursera.org/verify/JTNXGD8E75Y9" target="_blank">Introduction to Big Data – UC San Diego</a></div>
-        <div class="card"><a href="https://coursera.org/verify/7RW47J4DVRZL" target="_blank">AWS Fundamentals – Amazon Web Services</a></div>
+        <div class="skill">
+            <span>Python</span>
+            <div class="progress"><div style="width:90%"></div></div>
+        </div>
+        <div class="skill">
+            <span>Data Science</span>
+            <div class="progress"><div style="width:85%"></div></div>
+        </div>
+        <div class="skill">
+            <span>Machine Learning</span>
+            <div class="progress"><div style="width:80%"></div></div>
+        </div>
+        <div class="skill">
+            <span>NLP</span>
+            <div class="progress"><div style="width:78%"></div></div>
+        </div>
+        <div class="skill">
+            <span>AWS Cloud</span>
+            <div class="progress"><div style="width:70%"></div></div>
+        </div>
+        <div class="skill">
+            <span>HTML & CSS</span>
+            <div class="progress"><div style="width:75%"></div></div>
+        </div>
     </div>
 </section>
 
