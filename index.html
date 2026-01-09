@@ -108,12 +108,21 @@ color:#020617;text-decoration:none;transition:.3s
 
 /* FOOTER */
 footer{background:#020617;color:#94a3b8;text-align:center;padding:25px}
+
+/* FLOATING */
+.whatsapp{
+position:fixed;bottom:30px;right:30px;
+background:#25D366;color:#fff;
+padding:14px 16px;border-radius:50%;
+font-size:22px;z-index:3000
+}
 </style>
 </head>
 
 <body>
 
 <div class="toggle" onclick="toggleMode()">🌙 Dark</div>
+<a class="whatsapp" href="https://wa.me/916290723093" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
 <nav>
 <a href="#">Home</a>
@@ -136,9 +145,10 @@ footer{background:#020617;color:#94a3b8;text-align:center;padding:25px}
 <section>
 <h2>About Me</h2>
 <p>
-I am a motivated technology professional with strong foundations in Data Science, Artificial Intelligence, Python,
-Machine Learning, NLP, Big Data, and AWS Cloud. I have completed multiple globally recognized certifications from
-top universities and continuously strive to apply data-driven solutions to real-world problems.
+I am a motivated technology professional with strong foundations in Data Science,
+Artificial Intelligence, Python, Machine Learning, NLP, Big Data, and AWS Cloud.
+I have completed multiple globally recognized certifications from top universities
+and continuously strive to apply data-driven solutions to real-world problems.
 </p>
 </section>
 
@@ -177,15 +187,10 @@ top universities and continuously strive to apply data-driven solutions to real-
 </div>
 </section>
 
-<section>
-<h2>Career Interests</h2>
-<ul>
-<li>Data Scientist / Data Analyst</li>
-<li>Machine Learning Engineer (Junior)</li>
-<li>Python Developer</li>
-<li>AI / NLP Engineer</li>
-<li>Cloud Associate Roles</li>
-</ul>
+<section class="cta">
+<h2>Interested in working together?</h2>
+<p>Let’s build something impactful using Data, AI & Cloud.</p>
+<a href="mailto:Abhishek28456@gmail.com">Hire Me</a>
 </section>
 
 <section id="contact">
@@ -203,19 +208,16 @@ top universities and continuously strive to apply data-driven solutions to real-
 </footer>
 
 <script>
-/* DARK MODE */
 function toggleMode(){
  document.body.classList.toggle("dark");
  document.querySelector(".toggle").innerText =
   document.body.classList.contains("dark") ? "☀ Light" : "🌙 Dark";
 }
 
-/* typing */
 const t="Abhishek Kumar Singh";let i=0;
 function type(){if(i<t.length){document.getElementById("typing").innerHTML+=t[i++];setTimeout(type,120)}}
 type();
 
-/* animations */
 const sections=document.querySelectorAll("section");
 const bars=document.querySelectorAll(".progress div");
 window.addEventListener("scroll",()=>sections.forEach(s=>{
