@@ -1,6 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek Kumar Singh | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background: linear-gradient(135deg,#e2e8f0,#f8fafc); color:#1e293b; }
+        header { background: linear-gradient(135deg,#020617,#0f172a); color:#fff; padding:80px 20px; text-align:center; }
+        header img { width:170px;height:170px;border-radius:50%;border:5px solid #38bdf8;box-shadow:0 0 30px rgba(56,189,248,.6);margin-bottom:20px; }
+        section { max-width:1100px;margin:auto;padding:70px 20px; }
+        h2 { font-size:2rem;margin-bottom:30px;border-left:6px solid #38bdf8;padding-left:12px; }
+        .skills-wrapper { max-width:700px;margin:auto; }
+        .skill { margin-bottom:22px; }
+        .skill span { font-weight:600; }
+        .progress { height:12px;background:#cbd5f5;border-radius:20px;overflow:hidden;margin-top:8px; }
+        .progress div { height:100%;background:linear-gradient(90deg,#0ea5e9,#38bdf8);border-radius:20px;animation:grow 1.8s ease; }
+        @keyframes grow { from { width:0; } }
+        .grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px; }
+        .card { background:#fff;padding:30px;border-radius:18px;box-shadow:0 20px 40px rgba(0,0,0,.08);transition:.3s; }
+        .card:hover { transform:translateY(-8px);box-shadow:0 30px 60px rgba(0,0,0,.15); }
+        .social-links a { display:inline-block;margin:10px;padding:12px 24px;border-radius:30px;background:linear-gradient(135deg,#0ea5e9,#38bdf8);color:#020617;font-weight:600;transition:.3s; }
+        .social-links a:hover { transform:scale(1.08); }
+        footer { background:#020617;color:#94a3b8;text-align:center;padding:25px; }
+            /* PRO UPGRADE */
+        .toggle { position: fixed; top: 80px; right: 25px; z-index: 1001; background:#020617; color:#38bdf8; border-radius:20px; padding:8px 14px; cursor:pointer; }
+        body.dark { background:#020617; color:#e5e7eb; }
+        body.dark .card, body.dark .project { background:#020617; box-shadow:0 20px 40px rgba(56,189,248,.15); }
+        body.dark nav, body.dark footer { background:#020617; }
+        .projects { display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px; }
+        .project { background:#fff;padding:25px;border-radius:18px;box-shadow:0 20px 40px rgba(0,0,0,.08);transition:.4s; }
+        .project:hover { transform:translateY(-10px); }
+        .cta { text-align:center;background:linear-gradient(135deg,#0ea5e9,#38bdf8);color:#020617;padding:60px 20px;border-radius:25px; }
+        .cta a { display:inline-block;margin-top:20px;padding:14px 28px;background:#020617;color:#fff;border-radius:30px;font-weight:600; }
+    </style>
+    <style>
+        /* EXTRA ANIMATIONS – SAFE, CONTENT UNCHANGED */
+        html { scroll-behavior: smooth; }
+        nav {
+            position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+            background: rgba(2,6,23,0.85); backdrop-filter: blur(8px);
+            padding: 12px 30px; display: flex; justify-content: center; gap: 25px;
+        }
+        nav a { color: #cbd5f5; font-weight: 500; }
+        nav a:hover { color: #38bdf8; }
+        body { padding-top: 60px; }
+
+        /* typing cursor */
+        #typing-name::after {
+            content: "|"; margin-left: 4px; animation: blink 1s infinite;
+        }
+        @keyframes blink { 0%,50%{opacity:1;}51%,100%{opacity:0;} }
+
+        /* scroll reveal */
+        section { opacity: 0; transform: translateY(40px); transition: all .8s ease; }
+        section.show { opacity: 1; transform: translateY(0); }
+
+        /* back to top */
+        #topBtn {
+            position: fixed; bottom: 30px; right: 30px; z-index: 999;
+            background: linear-gradient(135deg,#0ea5e9,#38bdf8);
+            color: #020617; border: none; border-radius: 50%;
+            width: 48px; height: 48px; font-size: 20px; cursor: pointer;
+            display: none; box-shadow: 0 10px 25px rgba(14,165,233,.5);
+        }
+    </style>
+    <link rel="icon" type="image/png" href="Abhishek.png">
+    <meta name="description" content="Abhishek Kumar Singh | Data Science, AI, Python & Cloud Portfolio">
+</head>
+<body>
+<div id="loader">Loading...</div>
+<a class="whatsapp" href="https://wa.me/916290723093" target="_blank">💬</a>
+<div class="toggle" onclick="toggleMode()">🌙 Dark</div>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#skills">Skills</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<header>
+    <img src="Abhishek.png" alt="Abhishek Kumar Singh">
+    <h1 id="typing-name"></h1>
+    <script>
+        const text = "Abhishek Kumar Singh";
+        let i = 0;
+        function typeName() {
+            if (i < text.length) {
+                document.getElementById("typing-name").innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeName, 120);
+            }
+        }
+        typeName();
+    </script>
+<script>
+function toggleMode(){ document.body.classList.toggle('dark'); }
+</script>
+    <p>Data Science | AI | Python | Cloud Enthusiast</p>
+    <p>
+  Email: <a href="mailto:Abhishek28456@gmail.com?subject=Portfolio%20Contact&body=Hello%20Abhishek,%0D%0A%0D%0AI%20visited%20your%20portfolio%20and%20would%20like%20to%20connect.%0D%0A%0D%0ARegards," target="_blank">Abhishek28456@gmail.com</a>
+  | Phone: <a href="tel:+916290723093">+91-6290723093</a>
+</p>
+
+    
+</header>
+
+<section>
+    <h2>About Me</h2>
+    <p>
+        I am a motivated technology professional with strong foundations in Data Science, Artificial Intelligence, Python,
+        Machine Learning, NLP, Big Data, and AWS Cloud. I have completed multiple globally recognized certifications from
+        top universities and continuously strive to apply data-driven solutions to real-world problems.
+    </p>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-wrapper">
+        <div class="skill">
+            <span>Python</span>
+            <div class="progress"><div style="width:90%"></div></div>
+        </div>
+        <div class="skill">
+            <span>Data Science</span>
+            <div class="progress"><div style="width:85%"></div></div>
+        </div>
+        <div class="skill">
+            <span>Machine Learning</span>
+            <div class="progress"><div style="width:80%"></div></div>
+        </div>
+        <div class="skill">
+            <span>NLP</span>
+            <div class="progress"><div style="width:78%"></div></div>
+        </div>
+        <div class="skill">
+            <span>AWS Cloud</span>
+            <div class="progress"><div style="width:70%"></div></div>
+        </div>
+        <div class="skill">
+            <span>HTML & CSS</span>
+            <div class="progress"><div style="width:75%"></div></div>
+        </div>
+    </div>
+</section>
+
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+        <div class="project"><h3>Data Analysis Dashboard</h3><p>Python, Pandas, Matplotlib dashboard for insights.</p></div>
+        <div class="project"><h3>NLP Text Classifier</h3><p>ML-based NLP classifier using Python.</p></div>
+        <div class="project"><h3>AWS Cloud Deployment</h3><p>Scalable web app deployed on AWS.</p></div>
+    </div>
+</section>
+
+<section id="certifications">
+    <h2>Certifications</h2>
+    <div class="grid">
+        <div class="card"><a href="https://coursera.org/verify/V8XVVGTZAR6K" target="_blank">Johns Hopkins – A Crash Course in Data Science</a></div>
+        <div class="card"><a href="https://coursera.org/verify/933UKCZVLLGK" target="_blank">DeepLearning.AI – AI For Everyone</a></div>
+        <div class="card"><a href="https://coursera.org/verify/6PVHVM4QPRGG" target="_blank">DeepLearning.AI – NLP (Classification & Vector Spaces)</a></div>
+        <div class="card"><a href="https://coursera.org/verify/8SHNK8SQV5EV" target="_blank">DeepLearning.AI – NLP with Probabilistic Models</a></div>
+        <div class="card"><a href="https://coursera.org/verify/RLTWJVTE3TES" target="_blank">DeepLearning.AI – NLP with Sequence Models</a></div>
+        <div class="card"><a href="https://coursera.org/verify/PANVPPYKMX4K" target="_blank">Imperial College London – Mathematics for ML</a></div>
+        <div class="card"><a href="https://coursera.org/verify/JTNXGD8E75Y9" target="_blank">UC San Diego – Introduction to Big Data</a></div>
+        <div class="card"><a href="https://coursera.org/verify/7RW47J4DVRZL" target="_blank">AWS – Fundamentals: Going Cloud-Native</a></div>
+    </div>
+</section>
+
+<section>
+    <h2>Career Interests</h2>
+    <ul>
+        <li>Data Scientist / Data Analyst</li>
+        <li>Machine Learning Engineer (Junior)</li>
+        <li>Python Developer</li>
+        <li>AI / NLP Engineer</li>
+        <li>Cloud Associate Roles</li>
+    </ul>
+</section>
+
+<section class="cta">
+    <h2>Interested in working together?</h2>
+    <p>Let’s build something impactful using Data, AI & Cloud.</p>
+    <a href="mailto:Abhishek28456@gmail.com">Hire Me</a>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>
+      Email: <a href="mailto:Abhishek28456@gmail.com?subject=Portfolio%20Contact&body=Hello%20Abhishek,%0D%0A%0D%0AI%20visited%20your%20portfolio%20and%20would%20like%20to%20connect.%0D%0A%0D%0ARegards," target="_blank">Abhishek28456@gmail.com</a>
+    </p>
+    <p>Phone: +91-6290723093</p>
+
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/abhishek-singh-4949b323b" target="_blank">LinkedIn</a>
+        <a href="https://github.com/Abhishek-Kumar-Singh1" target="_blank">GitHub</a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Abhishek Kumar Singh | Portfolio</p>
+</footer>
+<style>
+#loader{position:fixed;inset:0;background:#020617;color:#38bdf8;display:flex;align-items:center;justify-content:center;font-size:24px;z-index:2000}
+.whatsapp{position:fixed;bottom:90px;right:30px;background:#25D366;color:#fff;padding:14px 16px;border-radius:50%;font-size:20px;box-shadow:0 10px 25px rgba(0,0,0,.3)}
+</style>
+<script>
+window.onload=()=>document.getElementById('loader').style.display='none';
+const bars=document.querySelectorAll('.progress div');
+const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.style.animation='grow 2s ease';}})});
+bars.forEach(b=>io.observe(b));
+</script>
+
+<button id="topBtn">↑</button>
+
+<script>
+    // scroll reveal
+    const sections = document.querySelectorAll('section');
+    window.addEventListener('scroll', () => {
+        sections.forEach(sec => {
+            if (sec.getBoundingClientRect().top < window.innerHeight - 120) {
+                sec.classList.add('show');
+            }
+        });
+
+        // back to top
+        document.getElementById('topBtn').style.display = window.scrollY > 400 ? 'block' : 'none';
+    });
+
+    document.getElementById('topBtn').onclick = () => window.scrollTo({top:0, behavior:'smooth'});
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Abhishek Kumar Singh | Portfolio</title>
