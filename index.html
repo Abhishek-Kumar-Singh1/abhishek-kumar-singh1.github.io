@@ -5,179 +5,115 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Abhishek Kumar Singh | Portfolio</title>
 
-<!-- SEO -->
 <meta name="description" content="Abhishek Kumar Singh | Data Science, AI, Python & Cloud Portfolio">
 <link rel="icon" type="image/png" href="Abhishek.png">
 
-<!-- Fonts & Icons -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
 html{scroll-behavior:smooth}
-body{
-  background:linear-gradient(135deg,#e2e8f0,#f8fafc);
-  color:#1e293b;
-  padding-top:60px;
-  transition:.4s;
-}
+body{background:linear-gradient(135deg,#e2e8f0,#f8fafc);color:#1e293b;padding-top:60px;transition:.4s}
 
 /* DARK MODE */
-body.dark{
-  background:#020617;
-  color:#e5e7eb;
-}
+body.dark{background:#020617;color:#e5e7eb}
 body.dark section{background:#020617}
-body.dark .card,
-body.dark .project{background:#020617;box-shadow:0 20px 40px rgba(56,189,248,.15)}
-body.dark nav,
-body.dark footer{background:#020617}
-body.dark a{color:#38bdf8}
+body.dark .card,body.dark .project{background:#020617;box-shadow:0 20px 40px rgba(56,189,248,.15)}
+body.dark nav,body.dark footer{background:#020617}
 
-/* NAVBAR */
+/* NAV */
 nav{
- position:fixed;top:0;left:0;width:100%;z-index:1000;
- background:rgba(2,6,23,.9);backdrop-filter:blur(8px);
- display:flex;justify-content:center;gap:25px;padding:12px
+position:fixed;top:0;left:0;width:100%;z-index:1000;
+background:rgba(2,6,23,.9);backdrop-filter:blur(8px);
+display:flex;justify-content:center;gap:25px;padding:12px
 }
 nav a{color:#cbd5f5;text-decoration:none;font-weight:500}
 nav a:hover{color:#38bdf8}
 
-/* DARK TOGGLE */
+/* TOGGLE */
 .toggle{
- position:fixed;top:80px;right:25px;
- background:#020617;color:#38bdf8;
- padding:8px 14px;border-radius:20px;
- cursor:pointer;z-index:2000;
-}
-
-/* SCROLL PROGRESS */
-#scrollProgress{
- position:fixed;top:0;left:0;height:4px;
- background:linear-gradient(90deg,#38bdf8,#0ea5e9);
- width:0%;z-index:3000
+position:fixed;top:80px;right:25px;z-index:2000;
+background:#020617;color:#38bdf8;
+padding:8px 14px;border-radius:20px;cursor:pointer
 }
 
 /* HEADER */
 header{
- background:linear-gradient(135deg,#020617,#0f172a);
- color:#fff;text-align:center;padding:90px 20px
+background:linear-gradient(135deg,#020617,#0f172a);
+color:#fff;text-align:center;padding:90px 20px
 }
 header img{
- width:170px;height:170px;border-radius:50%;
- border:5px solid #38bdf8;
- box-shadow:0 0 30px rgba(56,189,248,.6);
- margin-bottom:20px
+width:170px;height:170px;border-radius:50%;
+border:5px solid #38bdf8;
+box-shadow:0 0 30px rgba(56,189,248,.6);
+margin-bottom:20px
 }
 
 /* SECTIONS */
 section{
- max-width:1100px;margin:40px auto;padding:70px 20px;
- background:rgba(255,255,255,.85);
- border-radius:20px;
- opacity:0;transform:translateY(40px);
- transition:.8s
+max-width:1100px;margin:40px auto;padding:70px 20px;
+background:rgba(255,255,255,.85);
+border-radius:20px;
+opacity:0;transform:translateY(40px);
+transition:.8s
 }
 section.show{opacity:1;transform:none}
 
-h2{
- font-size:2rem;margin-bottom:30px;
- border-left:6px solid #38bdf8;padding-left:12px
-}
+h2{font-size:2rem;margin-bottom:30px;border-left:6px solid #38bdf8;padding-left:12px}
 
 /* SKILLS */
 .skills-wrapper{max-width:700px;margin:auto}
 .skill{margin-bottom:22px}
-.progress{
- height:12px;background:#cbd5f5;
- border-radius:20px;overflow:hidden;margin-top:8px
-}
-.progress div{
- height:100%;width:0;
- background:linear-gradient(90deg,#0ea5e9,#38bdf8);
- transition:width 2s ease
-}
+.progress{height:12px;background:#cbd5f5;border-radius:20px;overflow:hidden;margin-top:8px}
+.progress div{height:100%;width:0;background:linear-gradient(90deg,#0ea5e9,#38bdf8);transition:width 2s ease}
 
-/* CARDS */
-.grid{
- display:grid;
- grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
- gap:25px
-}
+/* GRIDS */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
 .card{
- background:#fff;padding:30px;border-radius:18px;
- box-shadow:0 20px 40px rgba(0,0,0,.1);
- transition:.3s
+background:#fff;padding:30px;border-radius:18px;
+box-shadow:0 20px 40px rgba(0,0,0,.1);
+transition:.3s
 }
 .card:hover{transform:translateY(-8px)}
-.card a{color:#020617;text-decoration:none;font-weight:500}
+.card a{text-decoration:none;color:#020617;font-weight:500}
 
 /* PROJECTS */
-.projects{
- display:grid;
- grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
- gap:25px
-}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}
 .project{
- background:#fff;padding:25px;border-radius:18px;
- box-shadow:0 20px 40px rgba(0,0,0,.1);
- transition:.3s
+background:#fff;padding:25px;border-radius:18px;
+box-shadow:0 20px 40px rgba(0,0,0,.1);
+transition:.3s
 }
 .project:hover{transform:translateY(-10px)}
 
 /* CTA */
 .cta{
- background:linear-gradient(135deg,#0ea5e9,#38bdf8);
- color:#020617;text-align:center;
- padding:60px 20px;border-radius:25px
+background:linear-gradient(135deg,#0ea5e9,#38bdf8);
+color:#020617;text-align:center;padding:60px 20px;border-radius:25px
 }
 .cta a{
- display:inline-block;margin-top:20px;
- padding:14px 28px;background:#020617;
- color:#fff;border-radius:30px;
- font-weight:600;text-decoration:none
+display:inline-block;margin-top:20px;padding:14px 28px;
+background:#020617;color:#fff;border-radius:30px;
+font-weight:600;text-decoration:none
 }
 
 /* SOCIAL */
 .social-links a{
- display:inline-block;margin:10px;
- padding:12px 24px;border-radius:30px;
- background:linear-gradient(135deg,#0ea5e9,#38bdf8);
- color:#020617;text-decoration:none;
- transition:.3s
+display:inline-block;margin:10px;padding:12px 24px;border-radius:30px;
+background:linear-gradient(135deg,#0ea5e9,#38bdf8);
+color:#020617;text-decoration:none;transition:.3s
 }
 .social-links a:hover{transform:scale(1.08)}
 
 /* FOOTER */
-footer{
- background:#020617;color:#94a3b8;
- text-align:center;padding:25px
-}
-
-/* FLOATING */
-#topBtn{
- position:fixed;bottom:30px;right:30px;
- width:48px;height:48px;border:none;
- border-radius:50%;
- background:linear-gradient(135deg,#0ea5e9,#38bdf8);
- color:#020617;font-size:20px;
- display:none;cursor:pointer;z-index:2000
-}
-.whatsapp{
- position:fixed;bottom:90px;right:30px;
- background:#25D366;color:#fff;
- padding:14px 16px;border-radius:50%;
- font-size:20px;z-index:2000
-}
+footer{background:#020617;color:#94a3b8;text-align:center;padding:25px}
 </style>
 </head>
 
 <body>
 
-<div id="scrollProgress"></div>
 <div class="toggle" onclick="toggleMode()">🌙 Dark</div>
-<a class="whatsapp" href="https://wa.me/916290723093" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
 <nav>
 <a href="#">Home</a>
@@ -197,15 +133,74 @@ footer{
 </p>
 </header>
 
-<!-- CONTENT SECTIONS SAME AS BEFORE -->
-<!-- (About, Skills, Projects, Certifications, Career Interests, CTA, Contact) -->
-<!-- NO CONTENT REMOVED -->
+<section>
+<h2>About Me</h2>
+<p>
+I am a motivated technology professional with strong foundations in Data Science, Artificial Intelligence, Python,
+Machine Learning, NLP, Big Data, and AWS Cloud. I have completed multiple globally recognized certifications from
+top universities and continuously strive to apply data-driven solutions to real-world problems.
+</p>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<div class="skills-wrapper">
+<div class="skill">Python<div class="progress"><div data-width="90%"></div></div></div>
+<div class="skill">Data Science<div class="progress"><div data-width="85%"></div></div></div>
+<div class="skill">Machine Learning<div class="progress"><div data-width="80%"></div></div></div>
+<div class="skill">NLP<div class="progress"><div data-width="78%"></div></div></div>
+<div class="skill">AWS Cloud<div class="progress"><div data-width="70%"></div></div></div>
+<div class="skill">HTML & CSS<div class="progress"><div data-width="75%"></div></div></div>
+</div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<div class="projects">
+<div class="project"><h3>Data Analysis Dashboard</h3><p>Python, Pandas, Matplotlib dashboard for insights.</p></div>
+<div class="project"><h3>NLP Text Classifier</h3><p>ML-based NLP classifier using Python.</p></div>
+<div class="project"><h3>AWS Cloud Deployment</h3><p>Scalable web app deployed on AWS.</p></div>
+</div>
+</section>
+
+<section id="certifications">
+<h2>Certifications</h2>
+<div class="grid">
+<div class="card"><a href="https://coursera.org/verify/V8XVVGTZAR6K" target="_blank">Johns Hopkins – A Crash Course in Data Science</a></div>
+<div class="card"><a href="https://coursera.org/verify/933UKCZVLLGK" target="_blank">DeepLearning.AI – AI For Everyone</a></div>
+<div class="card"><a href="https://coursera.org/verify/6PVHVM4QPRGG" target="_blank">DeepLearning.AI – NLP (Classification & Vector Spaces)</a></div>
+<div class="card"><a href="https://coursera.org/verify/8SHNK8SQV5EV" target="_blank">DeepLearning.AI – NLP with Probabilistic Models</a></div>
+<div class="card"><a href="https://coursera.org/verify/RLTWJVTE3TES" target="_blank">DeepLearning.AI – NLP with Sequence Models</a></div>
+<div class="card"><a href="https://coursera.org/verify/PANVPPYKMX4K" target="_blank">Imperial College London – Mathematics for ML</a></div>
+<div class="card"><a href="https://coursera.org/verify/JTNXGD8E75Y9" target="_blank">UC San Diego – Introduction to Big Data</a></div>
+<div class="card"><a href="https://coursera.org/verify/7RW47J4DVRZL" target="_blank">AWS – Fundamentals: Going Cloud-Native</a></div>
+</div>
+</section>
+
+<section>
+<h2>Career Interests</h2>
+<ul>
+<li>Data Scientist / Data Analyst</li>
+<li>Machine Learning Engineer (Junior)</li>
+<li>Python Developer</li>
+<li>AI / NLP Engineer</li>
+<li>Cloud Associate Roles</li>
+</ul>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<p>📧 Email: <a href="mailto:Abhishek28456@gmail.com">Abhishek28456@gmail.com</a></p>
+<p>📞 Phone: <a href="tel:+916290723093">+91-6290723093</a></p>
+<div class="social-links">
+<a href="https://www.linkedin.com/in/abhishek-singh-4949b323b" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+<a href="https://github.com/Abhishek-Kumar-Singh1" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+</div>
+</section>
 
 <footer>
 © 2026 Abhishek Kumar Singh | Portfolio
 </footer>
-
-<button id="topBtn">↑</button>
 
 <script>
 /* DARK MODE */
@@ -220,18 +215,13 @@ const t="Abhishek Kumar Singh";let i=0;
 function type(){if(i<t.length){document.getElementById("typing").innerHTML+=t[i++];setTimeout(type,120)}}
 type();
 
-/* scroll effects */
+/* animations */
 const sections=document.querySelectorAll("section");
 const bars=document.querySelectorAll(".progress div");
-window.addEventListener("scroll",()=>{
- let st=document.documentElement.scrollTop;
- let h=document.documentElement.scrollHeight-document.documentElement.clientHeight;
- document.getElementById("scrollProgress").style.width=(st/h)*100+"%";
- sections.forEach(s=>{if(s.getBoundingClientRect().top<window.innerHeight-120)s.classList.add("show")});
- document.getElementById("topBtn").style.display=st>400?"block":"none";
-});
+window.addEventListener("scroll",()=>sections.forEach(s=>{
+ if(s.getBoundingClientRect().top<window.innerHeight-120)s.classList.add("show")
+}));
 bars.forEach(b=>setTimeout(()=>b.style.width=b.dataset.width,400));
-document.getElementById("topBtn").onclick=()=>window.scrollTo({top:0,behavior:"smooth"});
 </script>
 
 </body>
