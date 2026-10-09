@@ -1,102 +1,198 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- ================= WORKING CLIENT EXPERIENCE ================= -->
 
-<title>Abhishek Kumar Singh | US Staffing & Recruitment | Data & AI</title>
+<section id="clients" class="client-experience">
 
-<meta name="description" content="Abhishek Kumar Singh | US IT Staffing, Recruitment, Data Science, AI, Python & Cloud Services">
-<meta name="keywords" content="US Staffing, IT Staffing, US Recruitment, W2 Staffing, 1099 Staffing, C2C Staffing, IT Recruitment, Talent Acquisition, Data Science, AI, Python, Cloud">
-<meta name="author" content="Abhishek Kumar Singh">
+  <div class="client-heading">
+    <span class="eyebrow">
+      <i class="fa-solid fa-briefcase"></i>
+      PROFESSIONAL EXPERIENCE
+    </span>
 
-<link rel="icon" type="image/png" href="216631.png">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <h2>Working Client Experience</h2>
+
+    <p class="client-intro">
+      Experienced in supporting US IT staffing and recruitment requirements
+      across multiple client environments, including healthcare, technology,
+      enterprise solutions, and direct-client engagements. My recruitment
+      responsibilities include understanding job requirements, sourcing
+      qualified candidates, screening resumes, matching technical skills,
+      and coordinating candidate submissions.
+    </p>
+  </div>
+
+  <div class="client-grid">
+
+    <div class="client-card">
+      <div class="client-icon">
+        <i class="fa-solid fa-heart-pulse"></i>
+      </div>
+      <div>
+        <h3>CVS Health</h3>
+        <p>
+          Healthcare client requirements, candidate sourcing,
+          resume screening, and recruitment support.
+        </p>
+      </div>
+    </div>
+
+    <div class="client-card">
+      <div class="client-icon">
+        <i class="fa-solid fa-road"></i>
+      </div>
+      <div>
+        <h3>AAA</h3>
+        <p>
+          Client-specific recruitment support, candidate identification,
+          and alignment with job requirements.
+        </p>
+      </div>
+    </div>
+
+    <div class="client-card">
+      <div class="client-icon">
+        <i class="fa-solid fa-flask"></i>
+      </div>
+      <div>
+        <h3>Solventum</h3>
+        <p>
+          Technology recruitment support, technical profile evaluation,
+          and candidate matching against client requirements.
+        </p>
+      </div>
+    </div>
+
+    <div class="client-card">
+      <div class="client-icon">
+        <i class="fa-solid fa-industry"></i>
+      </div>
+      <div>
+        <h3>3M</h3>
+        <p>
+          Recruitment support for technology positions,
+          including candidate sourcing and profile alignment.
+        </p>
+      </div>
+    </div>
+
+    <div class="client-card">
+      <div class="client-icon">
+        <i class="fa-solid fa-book-open"></i>
+      </div>
+      <div>
+        <h3>Wolters Kluwer</h3>
+        <p>
+          Client-focused recruitment support, resume evaluation,
+          and matching candidate experience to role requirements.
+        </p>
+      </div>
+    </div>
+
+    <div class="client-card client-card-highlight">
+      <div class="client-icon">
+        <i class="fa-solid fa-handshake"></i>
+      </div>
+      <div>
+        <h3>Multiple & Direct Clients</h3>
+        <p>
+          Supporting diverse client requirements, direct-client hiring needs,
+          staffing partnerships, and end-to-end recruitment coordination.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="client-workflow">
+    <h3>Recruitment Expertise</h3>
+
+    <div class="workflow-grid">
+      <div>
+        <span>01</span>
+        <strong>Requirement Analysis</strong>
+        <small>Understand job descriptions, skills, and hiring priorities.</small>
+      </div>
+
+      <div>
+        <span>02</span>
+        <strong>Talent Sourcing</strong>
+        <small>Find suitable candidates using Boolean search and sourcing strategies.</small>
+      </div>
+
+      <div>
+        <span>03</span>
+        <strong>Resume Screening</strong>
+        <small>Match candidate experience with technical and role-specific requirements.</small>
+      </div>
+
+      <div>
+        <span>04</span>
+        <strong>Candidate Coordination</strong>
+        <small>Support submissions, communication, and recruitment follow-up.</small>
+      </div>
+    </div>
+  </div>
+
+  <p class="client-note">
+    Client names represent relevant recruitment experience and do not imply
+    endorsement or direct employment by these organizations.
+  </p>
+
+</section>
 
 <style>
-* {
-  margin: 0;
+.client-experience {
+  background: linear-gradient(145deg, #ffffff, #f1f5f9);
+}
+
+.client-heading {
+  max-width: 820px;
+  margin: 0 auto 35px;
+  text-align: center;
+}
+
+.client-heading .eyebrow {
+  display: inline-block;
+  padding: 7px 15px;
+  border-radius: 30px;
+  background: #e0f2fe;
+  color: #0369a1;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.client-heading h2 {
+  border: none;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  margin-bottom: 15px;
+  font-size: 2.1rem;
 }
 
-html {
-  scroll-behavior: smooth;
+.client-intro {
+  color: #64748b;
+  line-height: 1.9;
 }
 
-body {
-  background: linear-gradient(135deg, #e2e8f0, #f8fafc);
-  color: #1e293b;
-  padding-top: 60px;
-  transition: .4s;
-  line-height: 1.6;
+.client-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
 }
 
-body.dark {
-  background: #020617;
-  color: #e5e7eb;
-}
-
-body.dark section {
-  background: #020617;
-}
-
-body.dark .card,
-body.dark .project,
-body.dark .service-card,
-body.dark .why-card {
-  background: #020617;
-  box-shadow: 0 20px 40px rgba(56,189,248,.15);
-}
-
-body.dark nav,
-body.dark footer {
-  background: #020617;
-}
-
-body.dark .card a {
-  color: #e5e7eb;
-}
-
-body.dark .card a:hover {
-  color: #38bdf8;
-}
-
-/* NAVIGATION */
-
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  background: rgba(2,6,23,.94);
-  backdrop-filter: blur(10px);
+.client-card {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 22px;
-  padding: 12px 15px;
-  flex-wrap: wrap;
-}
-
-nav a {
-  color: #cbd5f5;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 14px;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, .05);
   transition: .3s;
 }
 
-nav a:hover {
-  color: #38bdf8;
-}
-
-nav .nav-book {
-  background: linear-gradient(135deg,#0ea5e9,#38bdf8);
-  color: #020617;
-  padding: 7px 15px;
-  border-radius: 20px;
-  font-weight
+.client-card:hover {
+  transform: translateY(-5px);
+  border-color: #7dd3fc;
+  box-shadow: 0 14px 28px rgba
