@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -11,92 +12,1492 @@
 <meta name="author" content="Abhishek Kumar Singh">
 
 <link rel="icon" type="image/png" href="216631.png">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif
 }
 
-html {
-  scroll-behavior: smooth;
+html{
+  scroll-behavior:smooth
 }
 
-body {
-  background: linear-gradient(135deg, #e2e8f0, #f8fafc);
-  color: #1e293b;
-  padding-top: 60px;
-  transition: .4s;
-  line-height: 1.6;
+body{
+  background:linear-gradient(135deg,#e2e8f0,#f8fafc);
+  color:#1e293b;
+  padding-top:60px;
+  transition:.4s;
+  line-height:1.6
 }
 
-body.dark {
-  background: #020617;
-  color: #e5e7eb;
+body.dark{
+  background:#020617;
+  color:#e5e7eb
 }
 
-body.dark section {
-  background: #020617;
+body.dark section{
+  background:#020617
 }
 
 body.dark .card,
 body.dark .project,
 body.dark .service-card,
-body.dark .why-card {
-  background: #020617;
-  box-shadow: 0 20px 40px rgba(56,189,248,.15);
+body.dark .why-card{
+  background:#020617;
+  box-shadow:0 20px 40px rgba(56,189,248,.15)
 }
 
 body.dark nav,
-body.dark footer {
-  background: #020617;
+body.dark footer{
+  background:#020617
 }
 
-body.dark .card a {
-  color: #e5e7eb;
+body.dark .card a{
+  color:#e5e7eb
 }
 
-body.dark .card a:hover {
-  color: #38bdf8;
+body.dark .card a:hover{
+  color:#38bdf8
 }
 
-/* NAVIGATION */
+/* ================= NAV ================= */
 
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  background: rgba(2,6,23,.94);
-  backdrop-filter: blur(10px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 22px;
-  padding: 12px 15px;
-  flex-wrap: wrap;
+nav{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
+  background:rgba(2,6,23,.94);
+  backdrop-filter:blur(10px);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:22px;
+  padding:12px 15px;
+  flex-wrap:wrap
 }
 
-nav a {
-  color: #cbd5f5;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 14px;
-  transition: .3s;
+nav a{
+  color:#cbd5f5;
+  text-decoration:none;
+  font-weight:500;
+  font-size:14px;
+  transition:.3s
 }
 
-nav a:hover {
-  color: #38bdf8;
+nav a:hover{
+  color:#38bdf8
 }
 
-nav .nav-book {
-  background: linear-gradient(135deg,#0ea5e9,#38bdf8);
-  color: #020617;
-  padding: 7px 15px;
-  border-radius: 20px;
-  font-weight
+nav .nav-book{
+  background:linear-gradient(135deg,#0ea5e9,#38bdf8);
+  color:#020617;
+  padding:7px 15px;
+  border-radius:20px;
+  font-weight:700
+}
+
+nav .nav-book:hover{
+  color:#020617;
+  transform:scale(1.05)
+}
+
+/* ================= DARK TOGGLE ================= */
+
+.toggle{
+  position:fixed;
+  top:75px;
+  right:20px;
+  z-index:2000;
+  background:#020617;
+  color:#38bdf8;
+  padding:8px 14px;
+  border-radius:20px;
+  cursor:pointer;
+  box-shadow:0 5px 20px rgba(0,0,0,.2);
+  font-size:13px
+}
+
+/* ================= HEADER ================= */
+
+header{
+  background:
+    radial-gradient(circle at top right,rgba(56,189,248,.2),transparent 30%),
+    linear-gradient(135deg,#020617,#0f172a);
+  color:#fff;
+  text-align:center;
+  padding:95px 20px 85px
+}
+
+header img{
+  width:170px;
+  height:170px;
+  object-fit:cover;
+  border-radius:50%;
+  border:5px solid #38bdf8;
+  box-shadow:0 0 35px rgba(56,189,248,.6);
+  margin-bottom:20px
+}
+
+header h1{
+  font-size:2.7rem;
+  margin-bottom:10px
+}
+
+header .tagline{
+  font-size:1.1rem;
+  color:#cbd5e1;
+  margin-bottom:8px
+}
+
+.header-buttons{
+  margin-top:28px;
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap
+}
+
+.header-buttons a{
+  padding:13px 25px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+  transition:.3s
+}
+
+.primary-btn{
+  background:linear-gradient(135deg,#0ea5e9,#38bdf8);
+  color:#020617
+}
+
+.secondary-btn{
+  border:1px solid #38bdf8;
+  color:#38bdf8
+}
+
+.header-buttons a:hover{
+  transform:translateY(-3px)
+}
+
+/* ================= SECTIONS ================= */
+
+section{
+  max-width:1100px;
+  margin:40px auto;
+  padding:65px 25px;
+  background:rgba(255,255,255,.88);
+  border-radius:20px;
+  opacity:0;
+  transform:translateY(40px);
+  transition:.8s;
+  box-shadow:0 10px 30px rgba(0,0,0,.04)
+}
+
+section.show{
+  opacity:1;
+  transform:none
+}
+
+h2{
+  font-size:2rem;
+  margin-bottom:30px;
+  border-left:6px solid #38bdf8;
+  padding-left:12px
+}
+
+.section-intro{
+  max-width:850px;
+  margin:-10px auto 35px;
+  text-align:center;
+  color:#64748b
+}
+
+body.dark .section-intro{
+  color:#94a3b8
+}
+
+/* ================= STAFFING HERO ================= */
+
+.staffing-hero{
+  background:
+    radial-gradient(circle at 90% 10%,rgba(56,189,248,.22),transparent 30%),
+    linear-gradient(135deg,#0f172a,#020617);
+  color:#fff;
+  text-align:center;
+  padding:75px 25px
+}
+
+.staffing-hero h2{
+  border-left:none;
+  padding:0;
+  color:#38bdf8;
+  font-size:2.3rem
+}
+
+.staffing-hero p{
+  max-width:800px;
+  margin:0 auto 28px;
+  color:#cbd5e1
+}
+
+.staffing-badge{
+  display:inline-block;
+  background:rgba(56,189,248,.12);
+  border:1px solid rgba(56,189,248,.4);
+  color:#7dd3fc;
+  padding:7px 15px;
+  border-radius:30px;
+  margin-bottom:18px;
+  font-size:13px
+}
+
+/* ================= SERVICES ================= */
+
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:22px
+}
+
+.service-card{
+  background:#fff;
+  padding:28px 22px;
+  border-radius:18px;
+  box-shadow:0 15px 35px rgba(0,0,0,.08);
+  transition:.3s;
+  text-align:center;
+  border-top:4px solid #38bdf8
+}
+
+.service-card:hover{
+  transform:translateY(-8px)
+}
+
+.service-card i{
+  font-size:30px;
+  color:#0ea5e9;
+  margin-bottom:15px
+}
+
+.service-card h3{
+  margin-bottom:10px;
+  font-size:1.05rem
+}
+
+.service-card p{
+  color:#64748b;
+  font-size:.9rem
+}
+
+body.dark .service-card p{
+  color:#94a3b8
+}
+
+/* ================= STAFFING MODELS ================= */
+
+.model-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:18px
+}
+
+.model{
+  padding:22px;
+  border-radius:15px;
+  background:linear-gradient(135deg,#f0f9ff,#e0f2fe);
+  text-align:center;
+  font-weight:600;
+  color:#0f172a;
+  border:1px solid #bae6fd
+}
+
+body.dark .model{
+  background:#0f172a;
+  color:#e2e8f0;
+  border-color:#164e63
+}
+
+/* ================= WHY WORK ================= */
+
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:22px
+}
+
+.why-card{
+  background:#fff;
+  padding:28px;
+  border-radius:18px;
+  box-shadow:0 15px 35px rgba(0,0,0,.08)
+}
+
+.why-card i{
+  color:#0ea5e9;
+  font-size:28px;
+  margin-bottom:12px
+}
+
+.why-card h3{
+  margin-bottom:8px
+}
+
+/* ================= APPOINTMENT ================= */
+
+.appointment{
+  background:
+    radial-gradient(circle at bottom left,rgba(56,189,248,.2),transparent 30%),
+    linear-gradient(135deg,#020617,#0f172a);
+  color:#fff;
+  text-align:center;
+  padding:70px 25px
+}
+
+.appointment h2{
+  border-left:none;
+  padding:0;
+  color:#38bdf8
+}
+
+.appointment p{
+  max-width:750px;
+  margin:0 auto 30px;
+  color:#cbd5e1
+}
+
+.appointment-types{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:15px;
+  max-width:900px;
+  margin:0 auto 35px
+}
+
+.appointment-type{
+  padding:18px;
+  border:1px solid rgba(56,189,248,.35);
+  border-radius:14px;
+  background:rgba(255,255,255,.04)
+}
+
+.appointment-type i{
+  color:#38bdf8;
+  display:block;
+  font-size:22px;
+  margin-bottom:8px
+}
+
+.book-btn{
+  display:inline-block;
+  padding:15px 32px;
+  background:linear-gradient(135deg,#0ea5e9,#38bdf8);
+  color:#020617;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:700;
+  transition:.3s;
+  box-shadow:0 10px 30px rgba(14,165,233,.3)
+}
+
+.book-btn:hover{
+  transform:translateY(-4px);
+  box-shadow:0 15px 35px rgba(14,165,233,.45)
+}
+
+/* ================= SKILLS ================= */
+
+.skills-wrapper{
+  max-width:700px;
+  margin:auto
+}
+
+.skill{
+  margin-bottom:22px
+}
+
+.progress{
+  height:12px;
+  background:#cbd5f5;
+  border-radius:20px;
+  overflow:hidden;
+  margin-top:8px
+}
+
+.progress div{
+  height:100%;
+  width:0;
+  background:linear-gradient(90deg,#0ea5e9,#38bdf8);
+  transition:width 2s ease
+}
+
+/* ================= CARDS ================= */
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px
+}
+
+.card{
+  background:#fff;
+  padding:30px;
+  border-radius:18px;
+  box-shadow:0 20px 40px rgba(0,0,0,.1);
+  transition:.3s
+}
+
+.card:hover{
+  transform:translateY(-8px)
+}
+
+.card a{
+  text-decoration:none;
+  color:#020617;
+  font-weight:500
+}
+
+.card a:hover{
+  color:#0ea5e9
+}
+
+/* ================= PROJECTS ================= */
+
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px
+}
+
+.project{
+  background:#fff;
+  padding:25px;
+  border-radius:18px;
+  box-shadow:0 20px 40px rgba(0,0,0,.1);
+  transition:.3s
+}
+
+.project:hover{
+  transform:translateY(-10px)
+}
+
+/* ================= CTA ================= */
+
+.cta{
+  background:linear-gradient(135deg,#0ea5e9,#38bdf8);
+  color:#020617;
+  text-align:center;
+  padding:60px 20px;
+  border-radius:25px
+}
+
+.cta h2{
+  border-left:none;
+  padding:0
+}
+
+.cta a{
+  display:inline-block;
+  margin-top:20px;
+  padding:14px 28px;
+  background:#020617;
+  color:#fff;
+  border-radius:30px;
+  font-weight:600;
+  text-decoration:none
+}
+
+/* ================= SOCIAL ================= */
+
+.social-links{
+  margin-top:20px
+}
+
+.social-links a{
+  display:inline-block;
+  margin:10px;
+  padding:12px 24px;
+  border-radius:30px;
+  background:linear-gradient(135deg,#0ea5e9,#38bdf8);
+  color:#020617;
+  text-decoration:none;
+  transition:.3s;
+  font-weight:600
+}
+
+.social-links a:hover{
+  transform:scale(1.08)
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  background:#020617;
+  color:#94a3b8;
+  text-align:center;
+  padding:25px
+}
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp{
+  position:fixed;
+  bottom:30px;
+  right:30px;
+  background:#25D366;
+  color:#fff;
+  width:52px;
+  height:52px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  font-size:24px;
+  z-index:3000;
+  box-shadow:0 8px 25px rgba(0,0,0,.25);
+  text-decoration:none
+}
+
+.whatsapp:hover{
+  transform:scale(1.1)
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+  body{
+    padding-top:105px
+  }
+
+  nav{
+    gap:8px;
+    padding:8px
+  }
+
+  nav a{
+    font-size:11px
+  }
+
+  .toggle{
+    top:112px;
+    right:12px
+  }
+
+  header{
+    padding:65px 15px 60px
+  }
+
+  header img{
+    width:140px;
+    height:140px
+  }
+
+  header h1{
+    font-size:2rem
+  }
+
+  header .tagline{
+    font-size:.9rem
+  }
+
+  section{
+    margin:25px 12px;
+    padding:45px 18px
+  }
+
+  h2{
+    font-size:1.6rem
+  }
+
+  .staffing-hero h2{
+    font-size:1.8rem
+  }
+
+  .whatsapp{
+    right:18px;
+    bottom:18px
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ================= NAV ================= -->
+
+<nav>
+
+<a href="#home">Home</a>
+
+<a href="#staffing">US Staffing</a>
+
+<a href="#services">Services</a>
+
+<a href="#skills">Skills</a>
+
+<a href="#projects">Projects</a>
+
+<a href="#certifications">Certifications</a>
+
+<a href="#contact">Contact</a>
+
+<a href="#appointment" class="nav-book">
+<i class="fa-solid fa-calendar-check"></i>
+Book Appointment
+</a>
+
+</nav>
+
+<!-- ================= DARK MODE ================= -->
+
+<div class="toggle" onclick="toggleMode()">
+🌙 Dark
+</div>
+
+<!-- ================= HEADER ================= -->
+
+<header id="home">
+
+<img src="216631.png" alt="Abhishek Kumar Singh">
+
+<h1>
+<span id="typing"></span>
+</h1>
+
+<p class="tagline">
+US IT Staffing & Recruitment | Data Science | AI | Python | Cloud
+</p>
+
+<p>
+<i class="fa-solid fa-envelope"></i>
+Abhishek28456@gmail.com
+&nbsp; | &nbsp;
+
+<i class="fa-solid fa-phone"></i>
++91-6290723093
+</p>
+
+<div class="header-buttons">
+
+<a
+href="https://calendly.com/abhishek1-skillbird/30min"
+target="_blank"
+class="primary-btn">
+
+<i class="fa-solid fa-calendar-check"></i>
+Book Consultation
+
+</a>
+
+<a href="#staffing" class="secondary-btn">
+
+<i class="fa-solid fa-users"></i>
+Explore US Staffing
+
+</a>
+
+</div>
+
+</header>
+
+<!-- ================= STAFFING HERO ================= -->
+
+<section id="staffing" class="staffing-hero">
+
+<span class="staffing-badge">
+US IT STAFFING & RECRUITMENT
+</span>
+
+<h2>
+Connecting Businesses With Technology Talent
+</h2>
+
+<p>
+I support organizations and staffing partners with US IT recruitment,
+talent sourcing and candidate screening across modern technology domains.
+</p>
+
+<a
+href="https://calendly.com/abhishek1-skillbird/30min"
+target="_blank"
+class="book-btn">
+
+<i class="fa-solid fa-calendar-check"></i>
+Schedule a Hiring Discussion
+
+</a>
+
+</section>
+
+<!-- ================= SERVICES ================= -->
+
+<section id="services">
+
+<h2>US Staffing & Recruitment Services</h2>
+
+<p class="section-intro">
+Flexible recruitment and staffing support for companies,
+staffing firms and technology professionals.
+</p>
+
+<div class="services-grid">
+
+<div class="service-card">
+
+<i class="fa-solid fa-users"></i>
+
+<h3>US IT Staffing</h3>
+
+<p>
+Support for US technology staffing requirements across
+software, cloud, data, AI and enterprise technologies.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<i class="fa-solid fa-magnifying-glass-chart"></i>
+
+<h3>Talent Sourcing</h3>
+
+<p>
+Identify and source qualified technology professionals
+based on specific job requirements.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<i class="fa-solid fa-file-contract"></i>
+
+<h3>Contract Staffing</h3>
+
+<p>
+Support for short-term and long-term contract technology positions.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<i class="fa-solid fa-handshake"></i>
+
+<h3>Contract-to-Hire</h3>
+
+<p>
+Recruitment support for contract-to-hire staffing requirements.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<i class="fa-solid fa-building"></i>
+
+<h3>Direct Hire</h3>
+
+<p>
+Help organizations identify technology professionals for permanent positions.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<h3>Candidate Screening</h3>
+
+<p>
+Initial profile review, skill matching and requirement alignment.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<i class="fa-solid fa-code"></i>
+
+<h3>Technical Recruitment</h3>
+
+<p>
+Recruitment support across software, cloud, data, AI and enterprise technologies.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<i class="fa-solid fa-network-wired"></i>
+
+<h3>Recruitment Support</h3>
+
+<p>
+Flexible support for staffing companies and organizations with hiring needs.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= STAFFING MODELS ================= -->
+
+<section>
+
+<h2>Staffing Models</h2>
+
+<p class="section-intro">
+Flexible engagement models based on your organization's hiring requirements.
+</p>
+
+<div class="model-grid">
+
+<div class="model">
+<i class="fa-solid fa-briefcase"></i><br>
+W2 Staffing
+</div>
+
+<div class="model">
+<i class="fa-solid fa-file-signature"></i><br>
+1099 Staffing
+</div>
+
+<div class="model">
+<i class="fa-solid fa-building-user"></i><br>
+C2C Staffing
+</div>
+
+<div class="model">
+<i class="fa-solid fa-clock"></i><br>
+Contract
+</div>
+
+<div class="model">
+<i class="fa-solid fa-arrows-rotate"></i><br>
+Contract-to-Hire
+</div>
+
+<div class="model">
+<i class="fa-solid fa-user-check"></i><br>
+Direct Hire
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= WHY WORK WITH ME ================= -->
+
+<section>
+
+<h2>Why Work With Me?</h2>
+
+<div class="why-grid">
+
+<div class="why-card">
+
+<i class="fa-solid fa-bullseye"></i>
+
+<h3>Requirement Focused</h3>
+
+<p>
+Focused on understanding the actual technical and business requirements
+before presenting candidates.
+</p>
+
+</div>
+
+<div class="why-card">
+
+<i class="fa-solid fa-user-check"></i>
+
+<h3>Candidate Quality</h3>
+
+<p>
+Emphasis on relevant skills, experience, role alignment and profile quality.
+</p>
+
+</div>
+
+<div class="why-card">
+
+<i class="fa-solid fa-bolt"></i>
+
+<h3>Responsive Support</h3>
+
+<p>
+Fast communication and recruitment support throughout the hiring process.
+</p>
+
+</div>
+
+<div class="why-card">
+
+<i class="fa-solid fa-laptop-code"></i>
+
+<h3>Technology Focus</h3>
+
+<p>
+Familiarity with modern IT technologies across cloud, data, AI,
+software engineering and enterprise platforms.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= APPOINTMENT ================= -->
+
+<section id="appointment" class="appointment">
+
+<h2>Let's Discuss Your Requirement</h2>
+
+<p>
+Have a US IT staffing requirement, need recruitment support,
+looking for technology talent, or interested in a staffing partnership?
+Schedule a 30-minute consultation.
+</p>
+
+<div class="appointment-types">
+
+<div class="appointment-type">
+
+<i class="fa-solid fa-building"></i>
+
+<strong>Client Hiring</strong>
+
+<br>
+
+<small>Discuss your hiring requirements</small>
+
+</div>
+
+<div class="appointment-type">
+
+<i class="fa-solid fa-users"></i>
+
+<strong>Staffing Consultation</strong>
+
+<br>
+
+<small>Discuss staffing solutions</small>
+
+</div>
+
+<div class="appointment-type">
+
+<i class="fa-solid fa-user"></i>
+
+<strong>Candidate Consultation</strong>
+
+<br>
+
+<small>Discuss opportunities and profiles</small>
+
+</div>
+
+<div class="appointment-type">
+
+<i class="fa-solid fa-handshake"></i>
+
+<strong>Vendor Partnership</strong>
+
+<br>
+
+<small>Discuss recruitment collaboration</small>
+
+</div>
+
+</div>
+
+<a
+class="book-btn"
+href="https://calendly.com/abhishek1-skillbird/30min"
+target="_blank">
+
+<i class="fa-solid fa-calendar-check"></i>
+
+Book Your Appointment
+
+</a>
+
+<p style="margin-top:18px;font-size:13px">
+
+<i class="fa-solid fa-clock"></i>
+
+30-minute consultation via Calendly
+
+</p>
+
+</section>
+
+<!-- ================= ABOUT ================= -->
+
+<section>
+
+<h2>About Me</h2>
+
+<p>
+I am a motivated technology professional with strong foundations in
+Data Science, Artificial Intelligence, Python, Machine Learning,
+NLP, Big Data and AWS Cloud.
+</p>
+
+<br>
+
+<p>
+Alongside my technology background, I am involved in US IT staffing
+and recruitment, supporting organizations and staffing partners with
+talent sourcing, candidate screening and recruitment requirements.
+</p>
+
+</section>
+
+<!-- ================= SKILLS ================= -->
+
+<section id="skills">
+
+<h2>Technology Skills</h2>
+
+<div class="skills-wrapper">
+
+<div class="skill">
+
+Python
+
+<div class="progress">
+
+<div data-width="90%"></div>
+
+</div>
+
+</div>
+
+<div class="skill">
+
+Data Science
+
+<div class="progress">
+
+<div data-width="85%"></div>
+
+</div>
+
+</div>
+
+<div class="skill">
+
+Machine Learning
+
+<div class="progress">
+
+<div data-width="80%"></div>
+
+</div>
+
+</div>
+
+<div class="skill">
+
+NLP
+
+<div class="progress">
+
+<div data-width="78%"></div>
+
+</div>
+
+</div>
+
+<div class="skill">
+
+AWS Cloud
+
+<div class="progress">
+
+<div data-width="70%"></div>
+
+</div>
+
+</div>
+
+<div class="skill">
+
+HTML & CSS
+
+<div class="progress">
+
+<div data-width="75%"></div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= PROJECTS ================= -->
+
+<section id="projects">
+
+<h2>Projects</h2>
+
+<div class="projects">
+
+<div class="project">
+
+<h3>Data Analysis Dashboard</h3>
+
+<p>
+Python, Pandas and Matplotlib dashboard for business insights
+and data visualization.
+</p>
+
+</div>
+
+<div class="project">
+
+<h3>NLP Text Classifier</h3>
+
+<p>
+Machine-learning based NLP classifier developed using Python.
+</p>
+
+</div>
+
+<div class="project">
+
+<h3>AWS Cloud Deployment</h3>
+
+<p>
+Scalable web application deployed using AWS cloud infrastructure.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= CERTIFICATIONS ================= -->
+
+<section id="certifications">
+
+<h2>Certifications</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<a
+href="https://coursera.org/verify/V8XVVGTZAR6K"
+target="_blank">
+
+Johns Hopkins – A Crash Course in Data Science
+
+</a>
+
+</div>
+
+<div class="card">
+
+<a
+href="https://coursera.org/verify/933UKCZVLLGK"
+target="_blank">
+
+DeepLearning.AI – AI For Everyone
+
+</a>
+
+</div>
+
+<div class="card">
+
+<a
+href="https://coursera.org/verify/6PVHVM4QPRGG"
+target="_blank">
+
+DeepLearning.AI – NLP (Classification & Vector Spaces)
+
+</a>
+
+</div>
+
+<div class="card">
+
+<a
+href="https://coursera.org/verify/8SHNK8SQV5EV"
+target="_blank">
+
+DeepLearning.AI – NLP with Probabilistic Models
+
+</a>
+
+</div>
+
+<div class="card">
+
+<a
+href="https://coursera.org/verify/RLTWJVTE3TES"
+target="_blank">
+
+DeepLearning.AI – NLP with Sequence Models
+
+</a>
+
+</div>
+
+<div class="card">
+
+<a
+href="https://coursera.org/verify/PANVPPYKMX4K"
+target="_blank">
+
+Imperial College London – Mathematics for ML
+
+</a>
+
+</div>
+
+<div class="card">
+
+<a
+href="https://coursera.org/verify/JTNXGD8E75Y9"
+target="_blank">
+
+UC San Diego – Introduction to Big Data
+
+</a>
+
+</div>
+
+<div class="card">
+
+<a
+href="https://coursera.org/verify/7RW47J4DVRZL"
+target="_blank">
+
+AWS – Fundamentals: Going Cloud-Native
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+<h2>Need IT Talent in the USA?</h2>
+
+<p>
+Let's discuss your hiring requirements and find the right staffing approach.
+</p>
+
+<a
+href="https://calendly.com/abhishek1-skillbird/30min"
+target="_blank">
+
+<i class="fa-solid fa-calendar-check"></i>
+
+Book a Staffing Consultation
+
+</a>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<p>
+
+📧 Email:
+
+<a href="mailto:Abhishek28456@gmail.com">
+
+Abhishek28456@gmail.com
+
+</a>
+
+</p>
+
+<p>
+
+📞 Phone:
+
+<a href="tel:+916290723093">
+
++91-6290723093
+
+</a>
+
+</p>
+
+<div class="social-links">
+
+<a
+href="https://www.linkedin.com/in/abhishek-singh-4949b323b"
+target="_blank">
+
+<i class="fab fa-linkedin"></i>
+
+LinkedIn
+
+</a>
+
+<a
+href="https://github.com/Abhishek-Kumar-Singh1"
+target="_blank">
+
+<i class="fab fa-github"></i>
+
+GitHub
+
+</a>
+
+<a
+href="https://calendly.com/abhishek1-skillbird/30min"
+target="_blank">
+
+<i class="fa-solid fa-calendar-check"></i>
+
+Book Appointment
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+© 2026 Abhishek Kumar Singh |
+US Staffing & Recruitment Services |
+Data Science & AI
+
+<br><br>
+
+<a
+href="https://calendly.com/abhishek1-skillbird/30min"
+target="_blank"
+style="color:#38bdf8;text-decoration:none">
+
+📅 Schedule a Consultation
+
+</a>
+
+</footer>
+
+<!-- ================= WHATSAPP ================= -->
+
+<a
+class="whatsapp"
+href="https://wa.me/916290723093"
+target="_blank"
+aria-label="WhatsApp">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+<script>
+
+/* ================= DARK MODE ================= */
+
+function toggleMode(){
+
+  document.body.classList.toggle("dark");
+
+  document.querySelector(".toggle").innerText =
+    document.body.classList.contains("dark")
+    ? "☀ Light"
+    : "🌙 Dark";
+
+}
+
+/* ================= TYPING ================= */
+
+const t="Abhishek Kumar Singh";
+
+let i=0;
+
+function type(){
+
+  if(i<t.length){
+
+    document.getElementById("typing").innerHTML+=t[i++];
+
+    setTimeout(type,120);
+
+  }
+
+}
+
+type();
+
+/* ================= SCROLL ANIMATION ================= */
+
+const sections=document.querySelectorAll("section");
+
+const bars=document.querySelectorAll(".progress div");
+
+function revealSections(){
+
+  sections.forEach(s=>{
+
+    if(s.getBoundingClientRect().top < window.innerHeight-120){
+
+      s.classList.add("show");
+
+    }
+
+  });
+
+}
+
+window.addEventListener("scroll",revealSections);
+
+revealSections();
+
+/* ================= SKILL BARS ================= */
+
+bars.forEach(b=>{
+
+  setTimeout(()=>{
+
+    b.style.width=b.dataset.width;
+
+  },400);
+
+});
+
+</script>
+
+</body>
+</html>
